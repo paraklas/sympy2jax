@@ -11,9 +11,12 @@ from jax.scipy import special as jsp
 MUL = 0
 ADD = 1
 
-pi_fn = lambda x: jnp.pi
-half_fn = lambda x: 0.5
-rat_fn = lambda x, y: x/y
+def pi_fn():
+    return jnp.pi
+def half_fn():
+    return 0.5
+def rat_fn(x,y):
+    return x/y
 
 _jnp_func_lookup = {
     sympy.Mul: MUL,
