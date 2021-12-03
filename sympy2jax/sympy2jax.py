@@ -13,7 +13,7 @@ ADD = 1
 
 pi_fn = lambda x: jnp.pi
 half_fn = lambda x: 0.5
-rat_fn = lambda x, y: = x/y
+rat_fn = lambda x, y: x/y
 
 _jnp_func_lookup = {
     sympy.Mul: MUL,
