@@ -40,6 +40,7 @@ _jnp_func_lookup = {
     sympy.Pow: "jnp.power",
     sympy.re: "jnp.real",
     sympy.im: "jnp.imag",
+    sympy.pi: "jnp.pi",
     # Note: May raise error for ints and complexes
     sympy.erf: "jsp.erf",
     sympy.erfc: "jsp.erfc",
