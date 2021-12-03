@@ -40,7 +40,6 @@ _jnp_func_lookup = {
     sympy.Pow: "jnp.power",
     sympy.re: "jnp.real",
     sympy.im: "jnp.imag",
-    sympy.Pi: "jnp.pi",
     # Note: May raise error for ints and complexes
     sympy.erf: "jsp.erf",
     sympy.erfc: "jsp.erfc",
@@ -52,6 +51,8 @@ _jnp_func_lookup = {
     sympy.Max: "jnp.fmax",
     sympy.Min: "jnp.fmin",
     sympy.Mod: "jnp.fmod",
+    # Hack for pi
+    sympy.core.numbers.Pi: "jnp.pi"
 }
 
 def sympy2jaxtext(expr, parameters, symbols_in):
