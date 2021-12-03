@@ -52,7 +52,7 @@ _jnp_func_lookup = {
     sympy.Min: "jnp.fmin",
     sympy.Mod: "jnp.fmod",
     # Hack for pi
-    sympy.core.numbers.Pi: "jnp.pi"
+    sympy.core.numbers.Pi: "jnp.pi",
 }
 
 def sympy2jaxtext(expr, parameters, symbols_in):
