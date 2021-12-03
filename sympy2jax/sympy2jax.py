@@ -11,6 +11,9 @@ from jax.scipy import special as jsp
 MUL = 0
 ADD = 1
 
+pi_fn = lambda x: jnp.pi
+half_fn = lambda x: 0.5
+rat_fn = lambda x, y = x/y
 
 _jnp_func_lookup = {
     sympy.Mul: MUL,
@@ -53,9 +56,9 @@ _jnp_func_lookup = {
     sympy.Min: "jnp.fmin",
     sympy.Mod: "jnp.fmod",
     # Sympy hacks
-    sympy.core.numbers.Pi: "jnp.pi",
-    sympy.core.numbers.Half: "jnp.divide",
-    sympy.core.numbers.Rational: "jnp.divide",
+    sympy.core.numbers.Pi: "pi_fn",
+    sympy.core.numbers.Half: "half_fn",
+    sympy.core.numbers.Rational: "rat_fn",
 }
 
 def sympy2jaxtext(expr, parameters, symbols_in):
