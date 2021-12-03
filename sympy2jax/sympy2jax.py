@@ -12,6 +12,7 @@ MUL = 0
 ADD = 1
 
 half_fn = lambda x: 0.5
+ralf_fn = lambda x, y: x/y
 
 _jnp_func_lookup = {
     sympy.Mul: MUL,
@@ -56,6 +57,7 @@ _jnp_func_lookup = {
     # Sympy hacks
     sympy.core.numbers.Pi: "jnp.pi",
     sympy.core.numbers.Half: "half_fn",
+    sympy.core.numbers.Rational: "rat_fn",
 }
 
 def sympy2jaxtext(expr, parameters, symbols_in):
