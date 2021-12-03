@@ -11,8 +11,8 @@ from jax.scipy import special as jsp
 MUL = 0
 ADD = 1
 
-half_fn = lambda x: 0.5
-ralf_fn = lambda x, y: x/y
+half_fn = lambda x: jnp.divide(1.0,2.0)
+ralf_fn = lambda x, y: jnp.divide(x,y)
 
 _jnp_func_lookup = {
     sympy.Mul: MUL,
