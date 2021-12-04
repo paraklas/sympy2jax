@@ -58,7 +58,7 @@ _jnp_func_lookup = {
     sympy.Mod: "jnp.fmod",
     # Sympy hacks
     sympy.core.numbers.Pi: "pi_fn",
-    sympy.core.numbers.Half: "half_fn",
+#     sympy.core.numbers.Half: "half_fn",
 }
 
 def sympy2jaxtext(expr, parameters, symbols_in):
