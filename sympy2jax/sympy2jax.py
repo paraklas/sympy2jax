@@ -15,8 +15,6 @@ def pi_fn():
     return jnp.pi
 def half_fn():
     return 0.5
-def rat_fn():
-    return 1.0
 
 _jnp_func_lookup = {
     sympy.Mul: MUL,
@@ -61,7 +59,7 @@ _jnp_func_lookup = {
     # Sympy hacks
     sympy.core.numbers.Pi: "pi_fn",
     sympy.core.numbers.Half: "half_fn",
-#     sympy.core.numbers.Rational: "rat_fn",
+    sympy.core.numbers.Rational: "jnp.divide",
 }
 
 def sympy2jaxtext(expr, parameters, symbols_in):
