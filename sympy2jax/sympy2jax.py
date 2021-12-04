@@ -15,8 +15,8 @@ def pi_fn():
     return jnp.pi
 def half_fn():
     return 0.5
-def rat_fn(x,y):
-    return x/y
+def rat_fn(x):
+    return x
 
 _jnp_func_lookup = {
     sympy.Mul: MUL,
